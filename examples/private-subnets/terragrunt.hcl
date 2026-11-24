@@ -16,13 +16,13 @@
 
 # TERRAGRUNT — SUBNETS PRIVATE SUBNETS EXAMPLE
 # ------------------------------------------------------------------------------
-# modules/subnets/examples/private-subnets/terragrunt.hcl
+# examples/private-subnets/terragrunt.hcl
 #
 # Deploys the private-subnets example to Azure: data tier subnets with no
 # default outbound internet access. Generates the azurerm provider and backend
 # and passes the standard context inputs.
 #
-# Module: modules/subnets
+# Module: terraform-azurerm-subnets
 # ------------------------------------------------------------------------------
 
 locals {

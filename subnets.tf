@@ -14,7 +14,7 @@
 ## limitations under the License.
 ## ----------------------------------------------------------------------------
 ##
-##  modules/subnets/subnets.tf
+##  subnets.tf
 ##
 ##  Azure subnets inside an existing virtual network, one per map entry.
 ## ----------------------------------------------------------------------------
@@ -23,7 +23,7 @@
 module "subnet_context" {
   for_each = module.context.enabled ? var.subnets : {}
 
-  source  = "../null-context"
+  source  = "git::https://github.com/raringgroup/terraform-null-context.git?ref=v0.1.0"
   context = module.context.self
 
   attributes = ["snet"]

@@ -16,12 +16,12 @@
 
 # TERRAGRUNT — SUBNETS EXAMPLE
 # ------------------------------------------------------------------------------
-# modules/subnets/examples/complete/terragrunt.hcl
+# examples/complete/terragrunt.hcl
 #
 # Deploys the subnets example to Azure. Generates the azurerm provider and
 # backend and passes the standard context inputs.
 #
-# Module: modules/subnets
+# Module: terraform-azurerm-subnets
 # ------------------------------------------------------------------------------
 
 locals {

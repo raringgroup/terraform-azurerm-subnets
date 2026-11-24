@@ -14,7 +14,7 @@
 ## limitations under the License.
 ## ----------------------------------------------------------------------------
 ##
-##  modules/subnets/_outputs.tf
+##  _outputs.tf
 ##
 ##  Output values for the subnets module.
 ## ----------------------------------------------------------------------------

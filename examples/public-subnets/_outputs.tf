@@ -14,7 +14,7 @@
 ## limitations under the License.
 ## ----------------------------------------------------------------------------
 ##
-##  modules/subnets/examples/public-subnets/_outputs.tf
+##  examples/public-subnets/_outputs.tf
 ##
 ##  Outputs of the example.
 ## ----------------------------------------------------------------------------

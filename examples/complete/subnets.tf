@@ -14,30 +14,27 @@
 ## limitations under the License.
 ## ----------------------------------------------------------------------------
 ##
-##  modules/subnets/examples/complete/subnets.tf
+##  examples/complete/subnets.tf
 ##
 ##  Creates a resource group, a virtual network and two subnets (one delegated
 ##  to App Service, one with a Cosmos DB service endpoint).
 ## ----------------------------------------------------------------------------
 
 ## Resource Group
-module "resource_group" {
-  source  = "../../../resource-group"
-  context = module.context.self
-
+resource "azurerm_resource_group" "this" {
   location = var.region
+  name     = "${module.context.id}-rg"
+  tags     = module.context.tags
 }
 
 
 ## Virtual Network
-module "vnet" {
-  source  = "../../../vnet"
-  context = module.context.self
-
+resource "azurerm_virtual_network" "this" {
   address_space       = ["10.0.0.0/16"]
-  dns_servers         = []
-  location            = module.resource_group.location
-  resource_group_name = module.resource_group.name
+  location            = azurerm_resource_group.this.location
+  name                = "${module.context.id}-vnet"
+  resource_group_name = azurerm_resource_group.this.name
+  tags                = module.context.tags
 }
 
 
@@ -46,8 +43,8 @@ module "subnets" {
   source  = "../../"
   context = module.context.self
 
-  resource_group_name  = module.resource_group.name
-  virtual_network_name = module.vnet.name
+  resource_group_name  = azurerm_resource_group.this.name
+  virtual_network_name = azurerm_virtual_network.this.name
 
   subnets = {
     "app" = {
