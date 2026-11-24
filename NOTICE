@@ -7,5 +7,5 @@ Portions of this software are derived from terraform-null-label (https://github.
 Copyright 2017-2020 Cloud Posse, LLC, licensed under the Apache License, Version 2.0.
 The derived files are _context.tf and examples/*/_context.tf.
 Modifications by Raring Group LLC:
-- context module sourced from SevenPico/context/null (terraform-null-context) instead of cloudposse/label/null;
+- context module sourced from the Raring Group terraform-null-context module instead of cloudposse/label/null;
 - added inputs project, region, domain_name and dns_name_format to the context variables.
