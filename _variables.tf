@@ -14,7 +14,7 @@
 ## limitations under the License.
 ## ----------------------------------------------------------------------------
 ##
-##  modules/subnets/_variables.tf
+##  _variables.tf
 ##
 ##  Input variables for the subnets module.
 ## ----------------------------------------------------------------------------

@@ -23,7 +23,7 @@
 ## ----------------------------------------------------------------------------
 
 #
-# ONLY EDIT THIS FILE IN github.com/SevenPico/terraform-null-context
+# ONLY EDIT THIS FILE IN github.com/raringgroup/terraform-null-context
 # All other instances of this file should be a copy of that one
 #
 #
@@ -45,8 +45,8 @@
 #
 
 module "context" {
-  source  = "SevenPico/context/null"
-  version = "2.0.0" # requires Terraform >= 0.13.0
+  # Modified from upstream: uses the Raring Group context module.
+  source = "git::https://github.com/raringgroup/terraform-null-context.git?ref=v0.1.0"
 
   enabled             = var.enabled
   namespace           = var.namespace

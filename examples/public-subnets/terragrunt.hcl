@@ -16,13 +16,13 @@
 
 # TERRAGRUNT — SUBNETS PUBLIC SUBNETS EXAMPLE
 # ------------------------------------------------------------------------------
-# modules/subnets/examples/public-subnets/terragrunt.hcl
+# examples/public-subnets/terragrunt.hcl
 #
 # Deploys the public-subnets example to Azure: internet-facing tier subnets.
 # Generates the azurerm provider and backend and passes the standard context
 # inputs.
 #
-# Module: modules/subnets
+# Module: terraform-azurerm-subnets
 # ------------------------------------------------------------------------------
 
 locals {
